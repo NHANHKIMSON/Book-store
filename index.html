@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Camboia book store</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Magazine</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Textbooks</a></li>
+                        <li><a href="#">Product</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-box">
+                    <div class="search-box">
+                        <input type="Search" placeholder="search...">
+                        <a class="search-icon" href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="text-hero">
+                        <div class="hero-heading">
+                            <h1>Buy and sell your textbook
+                                for the best price </h1>
+                        </div>
+                        <div class="hero-paragraph">
+                            <p>Discover the best prices for buying  and selling the textbooks
+                                in our market place, buy and sell with confidence todays!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <div class="img">
+                        <img src="img/hero-image.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","UX Designer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
